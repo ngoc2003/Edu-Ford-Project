@@ -1,0 +1,485 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    scroll-behavior: smooth;
+    
+}
+.clear{
+    clear:both
+}
+/*                  HEADER                  */
+#header{
+    position:absolute;
+    top:0;
+    right:0;    
+    left:0; 
+    z-index:1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px 20px;
+    background-color: transparent;
+    height: 60px;
+}
+#header .fas,
+#header .nav i{
+    cursor: pointer;
+    display: none;
+    z-index:1;
+    color:#fff;
+    padding:10px 20px;
+    font-size:20px
+}
+#header .nav li{
+    display: inline-block;
+    padding-right:20px;
+}
+#header .nav li::after{
+    display: block;
+    content:'';
+    background-color: orangered;
+    height:2px;
+    width:0;
+    transition:0.5s;
+    margin:0 auto;
+}
+#header .nav li >a{
+    text-decoration: none;
+    color:white;
+    line-height:22px
+}
+
+/*                  SLIDER                  */
+#slider{
+    position:relative;
+    width:100% ;
+   
+}
+#slider img{
+    filter: brightness(50%);
+    
+}
+.slider-text{
+    position:absolute;
+    top:50%;
+    left:50%;
+    text-align: center;
+    transform:translate(-50%,-50%);
+    color:white;
+    text-shadow: gray 1px 1px;
+    font-weight: 540;
+}
+.slider-text .s-title{
+    font-size:36px;
+    font-weight: 600;
+    padding-bottom:30px;
+}
+.slider-text .s-description{
+    font-size:14px;
+    padding-bottom:30px;
+    line-height: 20px;
+}
+.s-link a{
+    display: inline-block;
+    text-decoration: none;
+    color:white;
+    padding:15px 30px;
+    border:1px solid white;
+    border-radius: 10px;
+}
+.s-link {
+    padding-top:20px;
+}
+.s-link a:hover{
+    background-color:orangered;
+    cursor:pointer;
+    border-color: orangered;
+    transition:1s;
+}
+
+/*                  COMMON                  */
+.div-margin{
+    text-align:center;
+    padding:10% 5%;
+    /* padding-bottom: 0; */
+}
+#course{
+    background-color: #fff;
+}
+.text-all{
+    font-size:24px;
+    font-weight:600;
+}
+.row-3{
+    display:flex;
+    justify-content: space-between;  
+}
+.description-all{
+    font-size:14px;
+    color:grey;
+    margin-bottom:40px;
+    padding-top: 16px;
+}
+
+
+/*                  COURSE                  */
+#course .course-image .course-img-title {
+    background-color:#d38282;
+    border-radius: 20px;
+    box-sizing: border-box;
+    margin:10px 20px;
+}
+#course .course-img-title .header{
+    margin:20px 0;
+}
+#course .course-img-title .body{
+    padding: 0 10px 20px; /* trên,trái phỉa, dưới*/
+    color:rgb(48, 43, 43);
+    font-size:15px;
+}
+#course .course-img-title:hover{
+    box-shadow: 0 0 14px rgb(109, 108, 108);
+}
+
+/*                  CAMPUS                  */
+#campus{
+    background-color: rgba(0, 0, 0, 0.959);
+    color:white;
+}
+#campus .campus-image .cp-img{
+    margin:10px 20px;
+    position: relative; 
+    overflow: hidden;
+}
+#campus .campus-image .cp-img div{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100%;
+    transition: 0.5s ;
+    border-radius: 20px;;
+}
+#campus .cp-img div:hover {
+    background-color: rgba(255, 68, 0, 0.596);
+}
+.layer h3{
+    position: absolute;
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+    color:#fff;
+    opacity:0;
+    text-shadow:grey 2px 2px;
+}
+.layer:hover h3{
+    bottom:49%;
+    transition: 0.5s;
+    opacity:1;
+}
+#campus .campus-image .cp-img img{
+    border-radius: 20px;
+}
+
+/*                  FACILITIES                  */
+.facilities-image .fac-img img{
+    border-radius: 20px;
+}
+.facilities-image .fac-img{
+    padding:20px ;
+    text-align:left;
+    
+}
+.facilities-image .fac-img h4{
+    margin: 16px 0;
+}
+.facilities-image .fac-img p{
+    font-size:14px;
+    color:grey;
+}
+
+/*                  FEEDBACK                    */
+#feedback{
+    color:white;
+    background-color:  rgba(0, 0, 0, 0.959);   
+}
+.student-fb {
+    display:flex;
+    border-radius: 10px;
+    background-color:#d38282;
+    margin: 10px 20px
+}
+.student-fb img{
+    height:80px;
+    padding:20px;
+    border-radius:50%;
+}
+.student-fb div p{
+    text-align:left;
+    font-size:14px;
+    padding:20px 0;
+    padding-right:10px;
+    color:rgba(245, 245, 245, 0.795);
+}
+.student-fb div h4{
+    padding-bottom:20px;
+    text-align:left;
+    font-size:15px;
+}
+.fas{
+    font-size:16px;
+    float:left;
+    padding:0 0 20px;
+    padding-right:6px;
+    color:black;
+}
+
+/*                  ENROLL SECTION                  */
+#enroll-section{
+    margin: 10% 5%;
+    position: relative;
+    color:white;
+}
+#enroll-section img{
+    filter: brightness(30%);
+    border-radius: 10px;
+}
+#enroll-section .er-text{
+    font-size:20px;
+    line-height: 20px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+#enroll-section .er-text h4{
+    padding-bottom:20px;
+}
+#enroll-section a{
+    display: inline-block;
+    padding:10px 20px;
+    font-size:14px;
+    text-decoration: none;
+    border:1px solid white;
+    color:white;
+    border-radius: 10px;
+}
+#enroll-section a:hover{
+    background-color: orangered;
+    border-color: orangered;
+    transition: 0.8s;
+}
+
+/*                  FOOTER                  */
+#footer{
+    background-color: rgba(0, 0, 0, 0.959);
+    color:#fff;
+}
+#footer h4{
+    padding-bottom:10px;
+}
+#footer p{
+    opacity: 0.5;
+    font-size:12px;
+    padding:10px 0;
+}
+.far{
+    color:orangered
+}
+#footer .fab{
+    width:40px;
+    color:orangered;
+    padding:10px 10px;
+    text-decoration: none;
+}
+#footer .fab:hover{
+    background-color: orangered;
+    color:#fff;
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor:pointer;
+}
+
+/*                  ABOUT PAGE                  */
+.about-col{
+    flex-basis: 48%;
+    text-align: left    ;
+}
+#about-description h3 {
+    font-size:30px;
+}
+#about-description p{
+    font-size:15px;
+    opacity:0.6;
+    padding:20px 10px;
+}
+#about-description a:hover{
+    background-color: orangered;
+    color:white;
+    transition:0.8s
+}
+#about-description a{
+    display: inline-block;
+    padding:10px 20px;
+    font-size:14px;
+    text-decoration: none;
+    border:1px solid orangered;
+    color:orangered;
+    border-radius: 10px;
+    margin-bottom:20px
+    
+}
+.about-slider {
+    height:60vh;
+    overflow: hidden;
+    background: linear-gradient(rgba(4,9,30,0.5) , rgba(4,9,30,0.5)), url(../assets/eduford_img/background.jpg) top center / cover no-repeat;
+    
+    
+}
+/*                  Course Page                 */
+.facilities-slider{
+    padding: 0 5% 8%
+}
+/*                  Blog Page                 */
+.my-slider{
+    height:60vh;
+    background: linear-gradient(rgba(4,9,30,0.5) , rgba(4,9,30,0.5)), url(../assets/eduford_img/background.jpg) top center / cover no-repeat;
+}
+#s-description{
+    display: flex;
+}
+.blog-col-1{
+    flex-basis:66%;
+    /* flex:2; */
+}
+.blog-col-2{
+    flex-basis:32%;
+    /* flex:1 */
+    font-size:16px;
+    padding:20px 0;
+    text-align: center;
+    
+}
+.blog-col-2 .cc-title{
+    background-color: orangered;
+    padding:10px 0;
+    color:#fff;
+    margin-bottom:10px;
+    font-size:22px
+}
+.blog-col-2 .cc-body{
+    display:flex;
+    justify-content: space-between;
+    color:rgb(109, 106, 106);
+}
+.blog-col-2 li{
+    list-style-type: none;
+    padding:8px;
+    text-align: left;
+    font-size:15px
+}
+#s-description{
+    margin:10% 5% ;
+}
+.blog-col-1 .cc-text h4{
+    font-size:22px;
+}
+.blog-col-1 .cc-text p{
+    color:rgb(109, 106, 106);
+    font-size:15px;
+}
+
+.blog-col-1 .table{
+    margin:5% 0 0;
+    display: flex;
+    flex-direction: column;
+    border:1px solid grey;
+    width:100%;
+    border-radius: 10px;
+}
+
+.blog-col-1 form{
+    padding:20px;
+}
+.blog-col-1 .input{
+    font-size:14px;
+    line-height: 18px;
+    padding:8px;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.164);
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+.blog-col-1 form .input-name{
+    margin:20px 0;
+}
+.blog-col-1 .input-comment{
+    margin:20px 0;
+    text-align: left;
+}
+
+.send-button:hover{
+    background-color: orangered;
+    color:white;
+    cursor: pointer;
+    transition: 0.8s;
+}
+.send-button{
+    padding:10px 20px;
+    background-color: white;
+    color:orangered;
+    border:1px solid orangered;
+    border-radius: 10px;
+}
+/*                  CONTACT PAGE                    */
+.location{
+    width:80%;
+    margin:auto;
+    padding:80px 0;
+}
+.location iframe{
+    width: 100%;;
+}
+.contact-us{
+    width:80%;
+    margin:auto;
+}
+.contact-col{
+    flex-basis:48%;
+    margin-bottom: 30px;
+}
+.contact-col div{
+    display: flex;
+    align-items: center;
+    margin-bottom:40px;
+}
+.contact-col div .fas{
+    font-size:26px;
+    color:orangered;
+    margin:10px;
+    margin-right:30px;
+    padding-bottom:0;
+}
+.contact-col div h5{
+    font-size:18px;
+    font-weight:400;
+    margin-bottom:8px;
+}
+.contact-col div p{
+    color:grey;
+    font-size:14px;
+}
+
+
+.contact-col form input,
+.contact-col form textarea{
+    width: 100%;
+    outline: none;
+    border:1px solid grey;
+    border-radius: 10px;
+    padding:10px;
+    margin-bottom:16px
+}

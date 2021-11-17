@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/icons/fontawesome-free-5.15.4-web/css/all.css">
+    <link rel="stylesheet" href="./assets/responsive.css">
+    <title>Edu Ford</title>
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <img src="./assets/eduford_img/logo.png" alt="" class="logo" width="150px">
+            <div class="nav" id="nav">
+                <i class="far fa-window-close" onclick="hideMenu()"></i>
+                <ul >
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </div>
+
+        <div id="slider" class="contact-slider my-slider">            
+            <div class="slider-text">
+                <h4 class="s-title">Contact Us</h4>
+            </div>
+        </div>
+
+        <div class="location">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497699.6983259305!2d77.6309395!3d12.9539974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBangalore%2C%20Karnataka%2C%20Inde!5e0!3m2!1sfr!2s!4v1637138964904!5m2!1sfr!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+        </div>
+        <div class="contact-us">
+            <div class="row-3">
+                <div class="contact-col">
+                    <div>
+                        <i class="fas fa-home"></i>
+                        <span>
+                            <h5>XYZ Road, ABC Building</h5>
+                            <p>Bangalore, Karnataka, IN</p>
+                        </span>
+                    </div>
+                    <div>
+                        <i class="fas fa-phone"></i>
+                        <span>
+                            <h5>+1 0123456789</h5>
+                            <p>Monday to Saturday, 10AM to 6PM</p>
+                        </span>
+                    </div>
+                    <div>
+                        <i class="fas fa-envelope"></i>
+                        <span>
+                            <h5>info@gmail.com</h5>
+                            <p>Email us your query</p>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="contact-col">
+                    <form action="form-handler.php" method="post">
+                        <input type="text" name="name" placeholder="Enter your name" required>
+                        <input type="email" name="email" placeholder="Enter your email address" required>
+                        <input type="text" name="subject" placeholder="Enter your subject" required>
+                        <textarea rows="8" name="message" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="send-button">SEND MESSAGE</button>
+
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+        
+        
+
+
+        <div id="footer" class="div-margin">
+            <h4>About Us</h4>
+            <p class="ft-p">Lorem ipsum dolor sit omet, consectetur adipiscing elit. 
+                Pellentesque aliquet turpis nulla, elleifend faucibus est sollicitudin ut. 
+                Maecenas ut venenatis ex, et dapibus purus. </p>
+            <div class="social">
+                <a class="fab fa-facebook-f" href="#"></a>
+                <a class="fab fa-twitter" href="#"></a>
+                <a class="fab fa-instagram" href="#"></a>
+                <a class="fab fa-linkedin-in" href="#"></a>
+            </div>
+            <p>Made with <i class="far fa-heart" href="#"></i> by Easy Tutorials</p>
+        </div>
+    </div>
+    
+    <script>
+//      Đóng mở khi bấm biểu tượng 
+        var header = document.getElementById("nav");
+        function hideMenu() {
+            header.style.right = "-250px";
+        }
+        function showMenu() {
+            header.style.right = "0";
+        }
+
+//      Tự động đóng thanh menu sau khi click
+        var menuItems = document.querySelectorAll('.nav li a[href *= "#"]');
+        for (var i = 0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i];
+
+            menuItem.onclick = function() {
+                header.style.right = "-250px";
+            }
+            }
+        
+
+    </script>
+</body>
+</html>

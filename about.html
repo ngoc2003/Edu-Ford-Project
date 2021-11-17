@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/icons/fontawesome-free-5.15.4-web/css/all.css">
+    <link rel="stylesheet" href="./assets/responsive.css">
+    <title>Edu Ford</title>
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <img src="./assets/eduford_img/logo.png" alt="" class="logo" width="150px">
+            <div class="nav" id="nav">
+                <i class="far fa-window-close" onclick="hideMenu()"></i>
+                <ul >
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </div>
+
+        <div id="slider" class="about-slider">
+            <!-- <img src="./assets/eduford_img/background.jpg" class="about-bg" alt="" width="100%" > -->
+            
+            <div class="slider-text">
+                <h4 class="s-title">About Us</h4>
+            </div>
+        </div>
+
+        <div id="about-description" class="div-margin row-3">
+            <div class="about-col">
+                <h3>We are the world's largest university</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet turpis nulla, eleifend faucibus est sollicitudin ut. Maecenas ut venenatis ex, et dapibus purus. Donec sit amet nisl non justo malesuada fermentum. Donec eget felis dolor. Suspendisse condimentum vestibulum ex ac cursus. Nam pharetra viverra efficitur. Sed pellentesque luctus arcu, quis finibus nibh luctus mattis.</p>
+                <a >EXPLORE NOW</a>
+            </div>
+            <div class="about-col">
+                <img src="./assets/eduford_img/about.jpg" alt="" width="100%" style="border-radius: 10px;">
+            </div>
+
+
+        </div>
+
+        <div id="footer" class="div-margin">
+            <h4>About Us</h4>
+            <p class="ft-p">Lorem ipsum dolor sit omet, consectetur adipiscing elit. 
+                Pellentesque aliquet turpis nulla, elleifend faucibus est sollicitudin ut. 
+                Maecenas ut venenatis ex, et dapibus purus. </p>
+            <div class="social">
+                <a class="fab fa-facebook-f" href="#"></a>
+                <a class="fab fa-twitter" href="#"></a>
+                <a class="fab fa-instagram" href="#"></a>
+                <a class="fab fa-linkedin-in" href="#"></a>
+            </div>
+            <p>Made with <i class="far fa-heart" href="#"></i> by Easy Tutorials</p>
+        </div>
+    </div>
+    
+    <script>
+//      Đóng mở khi bấm biểu tượng 
+        var header = document.getElementById("nav");
+        function hideMenu() {
+            header.style.right = "-250px";
+        }
+        function showMenu() {
+            header.style.right = "0";
+        }
+
+//      Tự động đóng thanh menu sau khi click
+        var menuItems = document.querySelectorAll('.nav li a[href *= "#"]');
+        for (var i = 0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i];
+
+            menuItem.onclick = function() {
+                header.style.right = "-250px";
+            }
+            }
+        
+
+    </script>
+</body>
+</html>
